@@ -14,9 +14,12 @@ According to the documentation found on Wowza's website, the query you are creat
 1. Build your query with the following parameters in alphabetical order
 - (This token is split up by the following “Name of Application + / + name of stream + ? + SecureToken Shared Secret + &zhashinstanceendtime= + end time in Epoch UnixTime + &tokenstarttime= + start time in Epoch UnixTime)
 - ie "live-app/stream01?mysecuresharedsecret&zhashinstanceendtime=1706312333&zhashinstancestarttime=1706333933" 
-1. Run the script with this as the value passed to the script
+
+2. Run the script with this as the value passed to the script
 - ie ./securetoken.sh "live-app/stream01?mysecuresharedsecret&zhashinstanceendtime=1706312333&zhashinstancestarttime=1706333933"
-1. the output should be a nice hash that you can then use to access the video using url with the securetoken hash at the end
- - ie u4OoUQUj2IFz18aKsf0Gn0DGoadV7WhtWlZkypXCXfc=
-1. To use this instance in vlc or some other streaming system, you can take the url and plug it in
+
+3. the output should be a nice hash that you can then use to access the video using url with the securetoken hash at the end
+- ie u4OoUQUj2IFz18aKsf0Gn0DGoadV7WhtWlZkypXCXfc=
+
+4. To use this instance in vlc or some other streaming system, you can take the url and plug it in
 - ie https://my-secure-wowza-server-address/live-app/stream01/playlist.m3u8?zhashinstancestarttime=1706333933&zhashinstanceendtime=1706312333&zhashinstancehash=u4OoUQUj2IFz18aKsf0Gn0DGoadV7WhtWlZkypXCXfc=
